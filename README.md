@@ -1,6 +1,6 @@
 # Trabalho de Compiladores
 
-## Trabalho da disciplina de ompiladores para o curso Ciência da Computação da Universidade Estadual do Ceará
+## Trabalho da disciplina de compiladores para o curso Ciência da Computação da Universidade Estadual do Ceará
 
 ### Alunos: 
     Edson Rodrigo Pinheiro Moreira (1394453)
