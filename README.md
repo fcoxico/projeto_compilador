@@ -10,10 +10,10 @@ Nome da Linguagem: PF (Programe Fácil)
 Linguagem desenvolvida com base na linguagem **Java**
 
 
-Introdução:
+#### Introdução:
 A linguagem PF tem como objetivo auxiliar aqueles com dificuldade em aprender linguagens de programação por não terem conhecimento do inglês. O PF é uma linguagem procedural semelhante à linguagem C, mas executa somente as instruções mais básicas, tais como operações matemáticas, estruturas condicionais e laços de repetição.
 
-Tabela de Tokens reconhecidos pela linguagem:
+#### Tabela de Tokens reconhecidos pela linguagem:
 
 | Token      | Lexema | Regex      | Descrição |
 | ----------- | ----------- | ----------- | ----------- |
@@ -39,6 +39,54 @@ Tabela de Tokens reconhecidos pela linguagem:
 | mostre | mostre | mostre | Função implementada “mostre” - para escrever na tela |
 | caractere | ‘a’, ‘2’, ‘X’ | \'[a-zA-Z0-9]\' | Caractere dentro do código | 
 | texto | “ação” | \"[^\"]*\" | Texto dentro do código | 
+
+
+#### A gramática aceita pelo programa
+
+Gramática:
+
+| Descrição      |     |  |
+| :-----------: | -----------: |-----------: |
+| programa      |::= ACH corpo FCH  |  |
+|               | ACH FCH;        | |
+| corpo      |   ::= corpo conteudo  | |
+|       | conteudo;        | |
+| conteudo |     ::= exp    |QUEBRA_LINHA |
+|         |  atrib | QUEBRA_LINHA |
+|       | decl | QUEBRA_LINHA |
+| | leitura | QUEBRA_LINHA |
+|       | saida        | QUEBRA_LINHA |
+|       | se        |
+|       | sese        |
+|       | se_senao         |
+|  | se_sese_senao | |
+| | repet | | 
+| | COMENTARIO || 
+| | programa  | | 
+| val | ::=NUMERO | |
+| | BOLEANO | | 
+| | CACARTERE | | 
+| | VAR; | | 
+| exp | ::=exp OPERADOR exp | | 
+| | exp COMPARADOR | | 
+| | AP exp FP | | 
+| | val; | | 
+| decl | ::TIPO VAR | | 
+| | TIPO atrib; | | 
+| atrib | ::VAR ATRIBUICAO exp; | | 
+| leitura | ::=LEIA AP params FP; ||
+| params |::var | | 
+|| VAR mais_params ; | | 
+| mais_params | ::VIRGULA VAR || 
+| | VIRGULA VAR mais_params | |
+| saida | ::= MOSTRE AP TEXTO VIRGULA params FP; ||
+| se | ::= SE AP exp FP programa; ||
+|se_sese | ::= se n_sese ; | |
+| n_sese | ::= SESE AP exp FP programa | |
+| | SESE AP exp FP programa n_sese; |
+| se_senao | ::= se SENAO programa; | | 
+| se_sese_senao | ::= se_sese SENAO programa; | |
+| repet |::= ENQUANTO AP exp FP programa; | |
 
 
 
