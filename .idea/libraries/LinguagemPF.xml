@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="LinguagemPF">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LinguagemPP/dist/LinguagemPF.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
